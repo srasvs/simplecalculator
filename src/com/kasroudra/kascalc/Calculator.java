@@ -571,7 +571,7 @@ import android.view.*;
 		if (readyToClear) {
 			txt = "";
 			readyToClear = false;
-		} else if (txt.equals("0"))
+		} else if ("0".equals(txt))
 			txt = "";
 
 		txt = txt + Integer.toString(num);
@@ -621,7 +621,7 @@ import android.view.*;
 			String txt = txtCalc.getText().toString();
 			if (txt.length() > 0) {
 				txt = txt.substring(0, txt.length() - 1);
-				if (txt.equals(""))
+				if ("".equals(txt))
 					txt = "0";
 
 				txtCalc.setText(txt);
@@ -633,7 +633,7 @@ import android.view.*;
 	private void handlePlusMinus() {
 		if (!readyToClear) {
 			String txt = txtCalc.getText().toString();
-			if (!txt.equals("0")) {
+			if (!"0".equals(txt)) {
 				if (txt.charAt(0) == '-')
 					txt = txt.substring(1, txt.length());
 				else
